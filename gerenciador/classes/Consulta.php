@@ -23,6 +23,7 @@ class Consulta{
     function consultaServico(){
       $sql = "SELECT nameser, id FROM servico";
       $result = $this->conexao->select($sql);
+      var_dump($result);
       return $result;
     }
     function cadProdutos(){
@@ -35,6 +36,7 @@ class Consulta{
       $fornecedor = $_POST['fornecedor'];
 
       $sql = "INSERT INTO produto(namep,cat,quant,valuepg,valuevd, dtcomp, fornecedor)VALUES('$descricao','$categoria',$quantidade, $valorcusto,$valorvenda,DATE('$data'),'$fornecedor')";
+
       $result= $this->conexao->query($sql);
       return $result;
     }

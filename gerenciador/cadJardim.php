@@ -40,6 +40,7 @@
 			    <select name="idser" id="nomeJardim" method="POST">
 						<?php
 								$result = $consulta->consultaServico();
+								var_dump($result);
 								foreach ($result as $nome =>$value) {
 									?>
 										<option value="<?=$result[$nome]['id']?>">
@@ -53,7 +54,7 @@
 
 						<?php	}
 
-							print_r($_POST['cliente']);
+							// print_r($_POST['cliente']);
 							?>
 				</select>
 				<span class="msg-erro" id="msg-nomeJardim"></span>
@@ -63,7 +64,7 @@
 				<input type="text" name="end" id="endereco" size="50">
 			 	<span class="msg-erro" id="msg-endereco"></span>
 			</div>
-			<div class="data">
+			<div class="form-item" style="margin-right:230px;">
 				<label for="data" class="rotulo">Data agendada:</label>
 		        <input type="date" id="data" name="data" size="50" >
 			    <span class="msg-erro" id="msg-data"></span>

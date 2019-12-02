@@ -20,55 +20,55 @@ document.getElementById("perfilP").onclick = function(){
 // 	idErro.innerHTML = mensagem;
 // 	contErros++;
 // }
-// document.getElementById("CPF").onkeypress=function(){
-// 	var a = document.getElementById("CPF").value;
-// 	erro = document.getElementById("msg-CPF");
-// 	if(a.length==3 || a.length==7){
-// 		a+=".";
-// 	}
-// 	if(a.length==11){
-// 		a+="-";
-// 	}
+document.getElementById("CPF").onkeypress=function(){
+	var a = document.getElementById("CPF").value;
+	erro = document.getElementById("msg-CPF");
+	if(a.length==3 || a.length==7){
+		a+=".";
+	}
+	if(a.length==11){
+		a+="-";
+	}
 //
-// 	document.getElementById("CPF").value=a;
-// 	document.getElementById("CPF").innerHTML="";
-// 	if (a.length!=13){
-// 		mostraErro(erro, "CPF incorreto");
-// 	}
-// 	else
-// 		ocultaErro(erro);
-//
-// }
-// document.getElementById("CNPJ").onkeypress=function(){
-// 	var a = document.getElementById("CNPJ").value;
-// 	erro = document.getElementById("msg-CNPJ");
-// 	if(a.length==2 || a.length==6){
-// 		a+=".";
-// 	}
-// 	if(a.length == 10){
-// 		a+="/";
-// 	}
-// 	if(a.length==14){
-// 		a+="-";
-// 	}
-//
-// 	document.getElementById("CNPJ").value=a;
-// 	document.getElementById("CNPJ").innerHTML="";
-// 	if (a.length!=16){
-// 		mostraErro(erro, "CNPJ incorreto");
-// 	}
-// 	else{
-// 		ocultaErro(erro);
-// 	}
-//
-// }
-// function ocultaErro(idErro){
-// 	idErro.style.display = "none";
-// }
-//
-// function validaCadastro(){
-//
-// 	contErros = 0;
+	document.getElementById("CPF").value=a;
+	document.getElementById("CPF").innerHTML="";
+	if (a.length!=13){
+		mostraErro(erro, "CPF incorreto");
+	}
+	else
+		ocultaErro(erro);
+
+}
+document.getElementById("CNPJ").onkeypress=function(){
+	var a = document.getElementById("CNPJ").value;
+	erro = document.getElementById("msg-CNPJ");
+	if(a.length==2 || a.length==6){
+		a+=".";
+	}
+	if(a.length == 10){
+		a+="/";
+	}
+	if(a.length==14){
+		a+="-";
+	}
+
+	document.getElementById("CNPJ").value=a;
+	document.getElementById("CNPJ").innerHTML="";
+	if (a.length!=16){
+		mostraErro(erro, "CNPJ incorreto");
+	}
+	else{
+		ocultaErro(erro);
+	}
+
+}
+function ocultaErro(idErro){
+	idErro.style.display = "none";
+}
+
+function validaCadastro(){
+
+	contErros = 0;
 //
 // 		// validação do campo nome
 // 	campo = document.getElementById("nome");
@@ -124,8 +124,8 @@ document.getElementById("perfilP").onclick = function(){
 //
 //
 //
-// 	if(contErros > 0)
-// 		return false;
-// 	else
-// 		alert("Cadastro realizado com sucesso"); // será removido futuramente
-// }
+	if(contErros > 0)
+		return false;
+	else
+		alert("Cadastro realizado com sucesso"); // será removido futuramente
+}

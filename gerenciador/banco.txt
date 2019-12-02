@@ -1,0 +1,100 @@
+DROP DATABASE IF EXISTS gerenciadorAtual;
+
+CREATE DATABASE gerenciador DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE gerenciadorAtual;
+
+DROP USER IF EXISTS 'admger'@'localhost';
+
+CREATE USER 'admger'@'localhost' IDENTIFIED BY '12345';
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON gerenciador.* TO 'admger'@'localhost';
+
+CREATE TABLE clientefisico (
+  id INTEGER AUTO_INCREMENT NOT NULL,
+  cpf VARCHAR(18)  NOT NULL,
+  nome VARCHAR(50) NOT NULL,
+  endereco VARCHAR (100) NOT NULL,
+  telefone INTEGER,
+  bairro VARCHAR(20) NOT NULL,
+  numero INTEGER,
+  complemento VARCHAR(100)NOT NULL,
+  PRIMARY KEY(id,cpf)
+);
+
+CREATE TABLE clientejuridico(
+
+  	id INTEGER AUTO_INCREMENT NOT NULL,
+	cnpj VARCHAR(18) ,
+	nome VARCHAR(50) NOT NULL,
+	endereco VARCHAR (100) NOT NULL,
+	telefone INTEGER,
+	bairro VARCHAR(20) NOT NULL,
+    numero INTEGER,
+    complemento VARCHAR(100)NOT NULL,
+    PRIMARY KEY(id,cnpj)
+
+);
+
+CREATE TABLE servico(
+	id INTEGER AUTO_INCREMENT  PRIMARY KEY,
+	nameser VARCHAR(50),
+	dthr DATE NOT NULL,
+	nser VARCHAR(1)NOT NULL,
+
+
+);
+
+CREATE TABLE tipomanutencao(
+	idtipo INTEGER AUTO_INCREMENT  PRIMARY KEY,
+	typeser VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE servmanutencao(
+	idtipo INTEGER,
+	id INTEGER,
+	FOREIGN KEY (idtipo) REFERENCES tipomanutencao(idtipo),
+	FOREIGN KEY (id) REFERENCES servico(id)
+);
+
+CREATE TABLE produto(
+	cod INTEGER AUTO_INCREMENT  PRIMARY KEY,
+	cat VARCHAR(50) NOT NULL,
+	namep VARCHAR(50) NOT NULL,
+	valuepg INTEGER NOT NULL,
+	valuevd INTEGER NOT NULL,
+	dtcomp DATE NOT NULL,
+  quant INTEGER not null,
+  fornecedor varchar(50) not null
+);
+
+CREATE TABLE jardimproduto(
+	idservico INTEGER ,
+	cod INTEGER ,
+	quant INTEGER NOT NULL,
+	valorFinal INTEGER NOT NULL,
+	FOREIGN KEY (idservico) REFERENCES servico(id),
+	FOREIGN KEY (cod) REFERENCES produto(cod),
+  PRIMARY KEY(idservico,cod)
+
+);
+
+CREATE TABLE usuario(
+	login VARCHAR(50) NOT NULL,
+	senha VARCHAR(50) NOT NULL
+
+);
+
+CREATE TABLE agendamento (
+  ncliente varchar(50),
+  idServ integer,
+  endereco varchar(100),
+  dataagend date,
+  FOREIGN key (idServ) REFERENCES servico(id)
+
+);
+
+INSERT INTO usuario(login, senha) VALUES('sandro','floricultura');
+
+
+  INSERT INTO tipomanutencao(typeser)VALUES('Corte de grama'),('Poda de árvore'),('Limpeza/Manutenção');

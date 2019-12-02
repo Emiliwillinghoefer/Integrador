@@ -46,8 +46,8 @@
                         print_r( $_SESSION['id']);
 
                        $sql = $consulta->insereManutencao($arrayName[$i], $_SESSION['id']);
-                       print_r($sql);
-                       // header("Location: cadJardim.php");
+                       // print_r($sql);
+                       header("Location: cadJardim.php");
 
                       }
                 }

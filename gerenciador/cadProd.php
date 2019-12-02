@@ -43,7 +43,7 @@
 				    	<input type="text" name="valuevd" id="venda" placeholder="R$ 0,00">
 				    	<span class="msg-erro" id="msg-venda"></span>
 				    </div>
-						<div class="data">
+						<div class="form-item" style="margin-right:225px;">
 							<label for="data" class="rotulo">Data da compra:</label>
 					        <input type="date" id="data" name="dtcomp" size="50" >
 						    <span class="msg-erro" id="msg-data"></span>
@@ -141,5 +141,7 @@ else{
 }
 
  ?>
+<script src="js/javaSc.js"></script>
 </div>
+
 <?php include "includes/rodape.php"; ?>
