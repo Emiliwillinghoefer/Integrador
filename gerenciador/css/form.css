@@ -1,0 +1,296 @@
+
+*{	box-sizing: border-box;
+	margin: 0;
+	list-style-type: none;}
+
+a{
+	text-decoration: none;
+}
+footer{
+	clear: left; /* para layout flexbox, retirar esta linha */
+}
+
+header, footer{
+	background: #ba2dba;
+	color: #ffffff;
+	padding: 30px;
+	position: relative;
+
+}
+header h1{
+	font-family: 'Lobster', cursive;
+	font-size:40px;
+  text-align: center;
+
+}
+
+header a{
+  color:#fff;
+}
+
+/**********************************************************/
+.opcoes {
+	margin-top: 40px;
+  margin-left:8px;
+  background-color: #ccc;
+  border-radius: 15px;
+  float: left;
+
+}
+
+.opcoes ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 4px;
+}
+
+.opcoes li {
+
+  text-transform: uppercase;
+  background-color: white;
+  margin-bottom: 1px;
+  padding: 20px 15px;
+}
+
+.opcoes li:hover {
+  background-color: #ddd;
+}
+
+.opcoes a {
+  color: #333333;
+  text-decoration: none;
+}
+
+/**********************************************************/
+
+.data{
+	margin: 20px;
+	text-align: center;
+
+
+}
+
+.titulo{
+	display: flex;
+}
+
+.titulo a{
+	display: inline-block;
+	padding-top: 10px;
+}
+.titulo h2{
+	flex-grow: 1;
+}
+
+nav {
+	background: #a78ce2;
+	padding:20px;
+	color:#fff;
+
+}
+
+nav h2{
+	font-family:  'Lobster', cursive;
+	font-size:30px;
+	text-align: center;
+}
+/*
+.opcoes{
+	width: 100%;
+	text-align: center;
+	flex-direction: column;
+
+}*/
+
+/*.opcoes #jardim,.opcoes #manutencao{
+	text-align: left;
+}*/
+
+input[type="text"],  select, textarea {
+	width: 30%;
+	border: 1px solid #5995DA;
+	padding: 3px;
+	margin:10px;
+	text-align: left;
+}
+
+.divtabela{
+	position: relative;
+	text-align: center;
+	/*
+	margin-left: auto;
+	margin-right: auto;
+*/
+}
+
+
+.tabela{
+	width: 50%;
+
+	align-items: center;
+	text-align: center;
+	font-size: 15pX;
+
+	margin-left:  330px;
+
+}
+
+.tabela td{
+	padding: 10px;
+	text-align: left;
+}
+
+
+.tabela  tr {
+	border: 1px solid #ccc;
+}
+
+
+
+input[type="submit"], input[type="reset"], input[type="button"] {
+	background-color: #5995DA;
+	color: white;
+	padding: 3px 20px;
+	border: none;
+	margin: 30px;
+	margin-right: 0;
+
+}
+.data{
+	margin-right: 340px;
+
+}
+.radio{
+	margin-right:  450px;
+	margin: 5px;
+	padding: 5px;
+}
+/* .categoria{
+	margin-left: 150px;
+	/*border:1px solid red;*/
+	/* display: inline; */
+
+
+
+#rotulo{
+	background-color: #ba2dba ;
+	color:white;
+	text-align: justify;
+	padding:50px;
+	font-size: 12px;
+	border: 1px solid #ccc;
+}
+
+ nav div img {
+
+ 	font-size: 30px;
+ 	 width: 20px;
+
+
+}
+
+div.cabecalho{
+	margin: 10px;
+}
+
+fieldset{
+	margin-right: auto;
+	margin-left: auto;
+	width: 60%;
+}
+
+
+@media only screen and (min-width: 300px) {
+   	.{
+   		display: none;
+   	}
+    .opcoes {width:  100%;
+
+
+    .col-2{
+    	width: 100%;
+    	/* font-size: 10px; */
+			/* float:left; */
+    	/* margin-left: auto;
+    	margin-right: auto; */
+    }
+    footer{
+    	position: relative;
+    }
+}
+
+@media only screen and (min-width: 600px){
+	.opcoes {width:  20%;
+			}
+
+	.col-2{
+		margin: auto;
+		width: 80%;
+
+
+
+}
+/*
+@media only screen and (min-width: 1000px) {
+
+	.cabecalho{
+   		display: inherit;
+   	}
+    .opcoes {width: 100%;
+              height: 100%;}
+
+    .tabela{
+    	width: 40%;
+    }
+   .tabela td{
+
+
+   	font-size: 14px;
+   		padding-left: 30px;
+
+   }
+   .mensagem{
+      margin-top: 280px;
+      width: 80%;
+      display: inherit;
+      font-size: 50px;
+      color: #ccc;
+    }
+
+   #rotulo{
+   	font-size: 20px;
+   }
+   footer{
+   	position: absolute;
+   }
+}
+*/
+div.mensagem{
+  margin-top: 250px;
+  text-align: center;
+  font-size: 40px;
+  color:#CCC;
+}
+footer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  bottom:0;
+}
+
+.col-2{
+  margin-top: 20px;
+  text-align: center;
+}
+
+#tabela, #table{
+  display:none;
+}
+label{
+    width: 180px;
+    display: -webkit-inline-box;
+    margin-left: 0px;
+}

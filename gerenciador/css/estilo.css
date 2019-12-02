@@ -1,0 +1,128 @@
+*{box-sizing: border-box;
+	margin: 0;}
+
+a{
+	text-decoration: none;
+}
+/*.opcoes, .mensagem {
+  margin-left: 5px;
+  float: left; 
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #f00;	  
+  padding: 1px;
+  width: 100%;
+}
+*/
+footer{
+	clear: left; /* para layout flexbox, retirar esta linha */
+}
+header h1{
+  font-family: 'Lobster', cursive;
+  font-size:40px;
+  text-align: center;
+
+}
+
+header a{
+  color:#fff;
+}
+header, footer{
+	background: #ba2dba;
+	color: #ffffff;               
+	padding: 30px;
+	position: relative;
+
+
+}
+div.cabecalho{
+	margin: 10px;
+}
+/**********************************************************/
+.opcoes {
+	
+  background-color: #ccc;
+
+  border-radius: 15px;    
+float: left;
+}
+
+.opcoes ul{
+  list-style-type: none;
+    
+    margin: 0;
+  padding: 5px;
+}
+
+.opcoes li {
+  
+  text-transform: uppercase;
+  background-color: white;
+  margin-bottom: 1px;
+  padding: 15px 10px;
+}
+
+.opcoes li:hover {
+  background-color: #ddd;
+}
+
+.opcoes a {
+  color: #333333;
+  text-decoration: none;
+} 
+
+
+
+
+
+
+/**********************************************************/
+
+@media only screen and (min-width: 300px) {
+   
+    .opcoes {width:  100%;}
+    .mensagem{
+      display: none;
+    }   
+}
+
+@media only screen and (min-width: 600px){
+  .opcoes{
+    width: 100%;
+    margin-top: 15px;
+  }
+  .mensagem{
+    margin-top: 500px; 
+    width: 100%;
+      display: inherit;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .opcoes {width: 20%;
+              height: 100%;}
+    .mensagem{
+      margin-top: 280px; 
+      width: 80%;
+      display: inherit;
+      font-size: 50px;
+      color: #ccc;  
+    }
+}
+
+/**********************************************************/
+
+div.mensagem{
+      
+  text-align: center;
+}
+footer {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  bottom:0;
+}
