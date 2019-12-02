@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS gerenciadorAtual;
 
-CREATE DATABASE gerenciador DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE gerenciadorAtual DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 USE gerenciadorAtual;
 
@@ -40,10 +40,7 @@ CREATE TABLE servico(
 	id INTEGER AUTO_INCREMENT  PRIMARY KEY,
 	nameser VARCHAR(50),
 	dthr DATE NOT NULL,
-	nser VARCHAR(1)NOT NULL,
-
-
-);
+	nser VARCHAR(1)NOT NULL);
 
 CREATE TABLE tipomanutencao(
 	idtipo INTEGER AUTO_INCREMENT  PRIMARY KEY,
